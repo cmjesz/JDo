@@ -14,9 +14,16 @@ public class Main extends Application {
 			Parent root = FXMLLoader.load(getClass().getResource("Layout.fxml"));
 	        
 	        Scene scene = new Scene(root);
-	        
+
+	        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
+	        primaryStage.sizeToScene();
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
+	        
+	        // Restricts the shrinking of the window below the starting size
+	        primaryStage.setMinWidth(primaryStage.getWidth());
+	        primaryStage.setMinHeight(primaryStage.getHeight());
 	        
 		} catch(Exception e) {
 			e.printStackTrace();

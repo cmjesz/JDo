@@ -1,0 +1,53 @@
+* {
+	-fx-background-color:  #1e1e1e;
+	-fx-text-fill:  #fcfcfc;
+    -fx-my-menu-color: #1e1e1e;                
+    -fx-my-menu-color-highlighted: #303030; 
+    -fx-my-menu-font-color: #fcfcfc;             
+    -fx-my-menu-font-color-highlighted: #fcfcfc; 
+}
+
+.context-menu {
+	-fx-background-color:  -fx-my-menu-color;
+	-fx-text-fill:  -fx-my-menu-font-color;
+}
+
+.button, .menu-button {
+	-fx-border-color: -fx-my-menu-font-color;
+	-fx-text-fill:  -fx-my-menu-font-color;
+}
+
+.menu-button {
+    -fx-background-color: -fx-my-menu-color;
+}
+
+.menu-button:hover,
+.menu-button:showing,
+.menu-button:hover > .label,
+.menu-button:showing > .label,
+.button:hover,
+.button:showing,
+.menu-button:hover > .arrow-button,
+.menu-button:showing > .arrow-button {
+    -fx-background-color: -fx-my-menu-color-highlighted; 
+}
+
+.menu-button > .arrow-button > .arrow {
+	-fx-background-color: -fx-my-menu-font-color;
+}
+
+.menu-item {
+    -fx-background-color: -fx-my-menu-color; 
+}
+
+.menu-item .label {
+    -fx-text-fill: -fx-my-menu-font-color;
+}
+   
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: -fx-my-menu-color-highlighted; 
+}
+
+.menu-item:focused .label, .menu-item:hovered .label {
+    -fx-background-color: -fx-my-menu-color-highlighted; 
+}
