@@ -1,47 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="400.0" minWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LayoutController">
+<AnchorPane minHeight="400.0" minWidth="225.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LayoutController">
    <children>
-      <Button fx:id="startStopButton" maxHeight="25.0" maxWidth="150.0" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#startStopButtonClicked" prefHeight="25.0" prefWidth="150.0" text="Start Timer" textAlignment="CENTER" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
-      <Label fx:id="timeElapsed" alignment="CENTER" contentDisplay="CENTER" text="" textAlignment="CENTER" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="35.0">
-         <font>
-            <Font size="34.0" />
-         </font>
-      </Label>
-      <MenuButton fx:id="intervalSelectMenu" maxHeight="25.0" maxWidth="35.0" minHeight="25.0" minWidth="35.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="5.0">
-        <items>
-          <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="5 Minutes" />
-          <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="10 Minutes" />
-          <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="15 Minutes" />
-          <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="20 Minutes" />
-          <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="30 Minutes" />
-          <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="60 Minutes" />
-        </items>
-      </MenuButton>
-      <Accordion AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
-        <panes>
-          <TitledPane animated="false" text="Task 1">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </TitledPane>
-          <TitledPane animated="false" text="Task 2">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </TitledPane>
-          <TitledPane animated="false" text="Task 3">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </TitledPane>
-        </panes>
-      </Accordion>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="startStopButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#startStopButtonClicked" prefHeight="25.0" prefWidth="162.5" text="Start Timer" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+            <MenuButton fx:id="intervalSelectMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="47.5">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="5 Minutes" />
+                <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="10 Minutes" />
+                <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="15 Minutes" />
+                <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="20 Minutes" />
+                <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="30 Minutes" />
+                <MenuItem mnemonicParsing="false" onAction="#setNewInterval" text="60 Minutes" />
+              </items>
+            </MenuButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <Label fx:id="timeElapsed" alignment="CENTER" contentDisplay="CENTER" text="" textAlignment="CENTER">
+               <font>
+                  <Font size="34.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="200.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="90.0">
+         <content>
+            <Accordion fx:id="taskAccordion" nodeOrientation="LEFT_TO_RIGHT">
+              <panes>
+                <TitledPane animated="false" contentDisplay="CENTER" text="Task 1" textAlignment="CENTER" />
+              </panes>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Accordion>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createNewTask" prefHeight="25.0" prefWidth="215.0" text="New Task" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

@@ -7,17 +7,24 @@
     -fx-my-menu-font-color-highlighted: #fcfcfc; 
 }
 
+.titled-pane,
+.titled-pane > .anchor-pane,
+.button, 
+.menu-button,
+.text-area,
+.text-field {
+	-fx-border-color: -fx-my-menu-font-color;
+	-fx-text-fill:  -fx-my-menu-font-color;
+}
+
 .context-menu {
 	-fx-background-color:  -fx-my-menu-color;
 	-fx-text-fill:  -fx-my-menu-font-color;
 }
 
-.button, .menu-button {
-	-fx-border-color: -fx-my-menu-font-color;
-	-fx-text-fill:  -fx-my-menu-font-color;
-}
-
-.menu-button {
+.menu-button,
+.menu-item,
+.titles-pane-skin {
     -fx-background-color: -fx-my-menu-color;
 }
 
@@ -28,26 +35,23 @@
 .button:hover,
 .button:showing,
 .menu-button:hover > .arrow-button,
-.menu-button:showing > .arrow-button {
+.menu-button:showing > .arrow-button,
+.titled-pane:hover > .title,
+.titled-pane:showing > .title,
+.titled-pane:hover > .title > .arrow-button,
+.titled-pane:showing > .title > .arrow-button,
+.menu-item:focused, 
+.menu-item:hovered,
+.menu-item:focused .label, 
+.menu-item:hovered .label {
     -fx-background-color: -fx-my-menu-color-highlighted; 
 }
 
-.menu-button > .arrow-button > .arrow {
+.menu-button > .arrow-button > .arrow,
+.titled-pane > .title > .arrow-button > .arrow {
 	-fx-background-color: -fx-my-menu-font-color;
-}
-
-.menu-item {
-    -fx-background-color: -fx-my-menu-color; 
 }
 
 .menu-item .label {
     -fx-text-fill: -fx-my-menu-font-color;
-}
-   
-.menu-item:focused, .menu-item:hovered {
-    -fx-background-color: -fx-my-menu-color-highlighted; 
-}
-
-.menu-item:focused .label, .menu-item:hovered .label {
-    -fx-background-color: -fx-my-menu-color-highlighted; 
 }
