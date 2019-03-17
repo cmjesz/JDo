@@ -54,7 +54,11 @@
       </ScrollPane>
       <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createNewTask" prefHeight="25.0" prefWidth="215.0" text="New Task" />
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createNewTask" prefHeight="25.0" prefWidth="105.0" text="New Task">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin></Button>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#generateReport" prefHeight="25.0" prefWidth="105.0" text="Report" />
          </children>
       </HBox>
    </children>
